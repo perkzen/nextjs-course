@@ -5,6 +5,11 @@ import { fetchInvoiceById, fetchCustomers } from '@/app/lib/data';
 // While error.tsx is useful for catching all errors,
 // notFound can be used when you try to fetch a resource that doesn't exist.
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Invoices Edit',
+};
 
 export default async function Page({ params }: { params: { id: string } }) {
   const id = params.id;
